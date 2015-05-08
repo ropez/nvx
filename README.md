@@ -7,6 +7,9 @@ single command with a specific version of Node.js. The command can be anything.
 If a shell is started, this provides similar functionality to _nvm_, except that
 the environment removed only by exiting the shell.
 
+This is useful in environments where you don't want to update the shell environment,
+for instance in installation scripts.
+
 # Usage
 
 ```
