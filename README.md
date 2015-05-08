@@ -21,8 +21,9 @@ Each version version of Node.js is downloaded automatically the first time it's 
 # Example
 
 ```
-nvx.sh v0.10.38 npm install -b babel
+nvx.sh v0.10.38 npm install -g babel
 nvx.sh v0.10.38 babel script.jsx
+nvx.sh v0.10.38 zsh
 ```
 
 # Roadmap
