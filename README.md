@@ -2,7 +2,7 @@
 
 Node.js Version eXecute - Run a command with a specific version of Node.js.
 
-This is to _nvm_, like _vex_ is to _virtualenv_. It's a simpler tool runs a
+This is to _nvm_, like _vex_ is to _virtualenv_. It's a simpler tool that runs a
 single command with a specific version of Node.js. The command can be anything.
 If a shell is started, this provides similar functionality to _nvm_, except that
 the environment removed only by exiting the shell.
