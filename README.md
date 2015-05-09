@@ -10,6 +10,16 @@ the environment exists until you exit the shell.
 This is useful in situations where you don't want to change the environment,
 for instance in installation scripts.
 
+## Installation
+
+No installation required, just copy or symlink `nvx.sh` to a directory in your system path, e.g. `~/.local/bin`.
+
+In some situations, it might be convenient to just run it once, without installation:
+
+```
+curl -s https://raw.githubusercontent.com/ropez/nvx/master/nvx.sh | sh -s v0.10.38 npm install
+```
+
 ## Usage
 
 ```
@@ -28,8 +38,7 @@ nvx.sh v0.10.38 zsh
 
 ## Roadmap
 
-- Detect OS, currently hard-coded to `linux-x64`
-- More options (home directory etc.)
+- Detect non-linux OS
 
 ## References
 
