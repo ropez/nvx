@@ -59,7 +59,6 @@ if [ ! -e "$NVX_DIR/$VERSION" ]; then
 fi
 
 shift
-exec env \
-  PATH="$NVX_DIR/$VERSION/bin:$PATH" \
-  NODE_PATH="$NVX_DIR/$VERSION/lib/node_modules:$NODE_PATH" \
-  "$@"
+export PATH="$NVX_DIR/$VERSION/bin:$PATH"
+export NODE_PATH="$NVX_DIR/$VERSION/lib/node_modules:$NODE_PATH"
+exec "$@"
