@@ -2,8 +2,12 @@
 
 SCRIPT="$(basename $0)"
 
-die() {
+log() {
   echo "[$SCRIPT] $@" >&2
+}
+
+die() {
+  log "$@"
   exit 1
 }
 
@@ -44,10 +48,11 @@ if [ ! -e "$NVX_DIR/$VERSION" ]; then
   TARBALL_URL="$MIRROR/$VERSION/$TARBALL"
 
   TMP=$(mktemp --tmpdir -d nvx-XXXXXX)
-  echo "[$SCRIPT] downloading $TARBALL..."
+  log "downloading $TARBALL..."
   curl -sf "$TARBALL_URL" -o "$TMP/$TARBALL" || die "$TARBALL not found"
   tar xzf "$TMP/$TARBALL" -C "$TMP"
 
+  log "installing $VERSION..."
   mkdir -p "$NVX_DIR"
   mv "$TMP/$DIRNAME" "$NVX_DIR/$VERSION"
   rm -r "$TMP"
